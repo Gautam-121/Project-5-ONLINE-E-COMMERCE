@@ -53,7 +53,7 @@ const createCart = async (req, res) => {
                 return res.status(404).send({ status: false, message: "Product not found" })
             }
 
-            // check cart already exist or not
+            // check the cart already exist or not 
 
             const cartExist = await cartModel.findOne({ userId }).lean()
 
